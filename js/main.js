@@ -5,10 +5,18 @@ $(document).ready(function(){
     var appar = $('#apparition');
 
     $('#btnHello').on("click", function(){
-        var tblTxt = ["H","E","L","L","0"];
+        
+        var myTbl = [];
+        var text = "U ARE DEADPOOL NOW";
+        var textLen = text.length;        
+
+        for (let i = 0; i < textLen; i++) { 
+            myTbl.push(text[i]);
+        } 
+
         var time = 200;
         appar.html("");
-        $.each(tblTxt, function(index, value){            
+        $.each(myTbl, function(index, value){            
             setTimeout(function(){
                 appar.append(value);
                 }, time)
